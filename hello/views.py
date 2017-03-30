@@ -9,10 +9,8 @@ from .models import Greeting
 def index(request):
     name = escape(request.META['HTTP_HOST']).split('.')[-3]
     title = "%s got peachd" % (name.title())
-    try:
-        fart = get("https://sfx-api.herokuapp.com/farts/random").json()
-    except:
-        fart = {}
+    greeting = Greeting()
+    fart = greeting.random_fart()
 
     return render(request, 'index.html', {
         'greeting': {
