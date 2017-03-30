@@ -1,12 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from cgi import escape
 
 from .models import Greeting
 
 # Create your views here.
 def index(request):
-    # return HttpResponse('Hello from Python!')
-    return render(request, 'index.html')
+    name = escape(request.META['HTTP_HOST']).split('.')[-3]
+    title = "%s got peachd" % (name.title())
+
+    return render(request, 'index.html', {
+        'greeting': {
+            'title': title,
+            'name': name
+        }
+    })
 
 
 def db(request):
