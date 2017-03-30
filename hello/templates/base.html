@@ -4,11 +4,24 @@
 <html>
 <head>
 <title>{{ greeting.title }}</title>
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://{{ request.META.HTTP_HOST }}" />
-<meta property="og:title" content="{{ greeting.title }}" />
-<meta property="og:description" content="Food is running late, huh? You're probably hungry... that's too bad. Sounds like {{ greeting.name|title }} got peachd." />
-<meta property="og:image" content="http://{{ request.META.HTTP_HOST }}{% static 'gotpeachd.jpg' %}" />
+
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="http://{{ request.META.HTTP_HOST }}" />
+<meta property="og:title"       content="{{ greeting.title }}" />
+<meta property="og:description" content="Food is running late, huh? You're probably hungry... that's too bad." />
+<meta property="og:image"       content="http://{{ request.META.HTTP_HOST }}{% static 'gotpeachd.jpg' %}" />
+
+<meta name="twitter:card"   content="summary_large_image" />
+<meta name="twitter:domain" value="{{ request.META.HTTP_HOST }}" />
+<meta name="twitter:title"  value="{{ greeting.title }}" />
+<meta name="twitter:description" value="Food is running late, huh? You're probably hungry... that's too bad." />
+<meta name="twitter:url"    value="http://{{ request.META.HTTP_HOST }}" />
+<meta name="twitter:image"  value="http://{{ request.META.HTTP_HOST }}{% static 'gotpeachd.jpg' %}" />
+<meta name="twitter:label1" value="{{greeting.name}} ordered">
+<meta name="twitter:data1"  value="Delicious food">
+<meta name="twitter:label2" value="Time of arrival 🕐">
+<meta name="twitter:data2"  value="Probably never">
+
 </head>
 <body>
 {% block content %}{% endblock %}
