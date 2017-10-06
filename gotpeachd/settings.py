@@ -22,6 +22,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: change this before deploying to production!
+# Normally this shouldn't be committed, but this site doesn't run the
+# admin panel or require any user input.
 SECRET_KEY = 'i+acxn5(akg33333333gf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
