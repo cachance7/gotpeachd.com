@@ -2,11 +2,9 @@
 
 A silly site that farts at you and renders unfurlable content based on subdomain
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
-
 ## Running Locally
 
-Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
+Make sure you have Python [installed properly](http://install.python-guide.org).
 
 ```sh
 $ git clone git@github.com:cachance7/gotpeachd.com.git
@@ -14,28 +12,24 @@ $ cd gotpeachd.com
 
 $ pip install -r requirements.txt
 
-$ createdb gotpeachd.com
-
 $ python manage.py migrate
 $ python manage.py collectstatic
 
-$ heroku local
+$ python manage.py runserver
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+Your app should now be running locally on port 8000.
 
-## Deploying to Heroku
+Put this in `/etc/hosts` to test:
 
 ```sh
-$ heroku create
-$ git push heroku master
-
-$ heroku run python manage.py migrate
-$ heroku open
+# gotpeachd subdomain test
+test.gotpeachd.com 127.0.0.1
 ```
-or
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+Open this in a browser to see:
+
+`http://test.gotpeachd.com:8000`
 
 ## Documentation
 
