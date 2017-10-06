@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Python",
-  "description": "A barebones Python app, which can easily be deployed to Heroku.",
+  "name": "gotpeachd.com",
+  "description": "A silly site that unfurls nicely in Slack and farts at you when you visit",
   "image": "heroku/python",
-  "repository": "https://github.com/heroku/python-getting-started",
-  "keywords": ["python", "django" ],
+  "repository": "https://github.com/cachance7/gotpeachd.com",
+  "keywords": ["python", "django", "gotpeachd" ],
   "addons": [ "heroku-postgresql" ]
 }

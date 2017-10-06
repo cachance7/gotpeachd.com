@@ -1,6 +1,6 @@
-# python-getting-started
+# gotpeachd.com
 
-A barebones Python app, which can easily be deployed to Heroku.
+A silly site that farts at you and renders unfurlable content based on subdomain
 
 This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
 
@@ -9,12 +9,12 @@ This application supports the [Getting Started with Python on Heroku](https://de
 Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
 
 ```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
+$ git clone git@github.com:cachance7/gotpeachd.com.git
+$ cd gotpeachd.com
 
 $ pip install -r requirements.txt
 
-$ createdb python_getting_started
+$ createdb gotpeachd.com
 
 $ python manage.py migrate
 $ python manage.py collectstatic
